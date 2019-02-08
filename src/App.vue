@@ -6,40 +6,55 @@
       <div class="container">
       <div class="row topRow bg-light border d-flex align-items-center justify-content-center" >
       <button type="button" @click="fetchUsers" class="btn btn-success">Fetch Records</button>
-      <button type="button" @click="deleteUsers" class="btn btn-success ml-3">Register Student</button>
+      <button type="button" class="btn btn-success ml-2" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Register Student</button>
      </div>
-     <div class="row d-flex justify-content-between" >
-         <div class="card p-2 mt-1 mb-2" style="">
-           <!-- <header name="fName" class="text-success bold  font mb-3"></header> -->
+     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+           <div class="  mt-1" style="">
          <form action="api" method="POST">
-              <div class="form-group row">
-                <label for="staticEmail" class="col-sm-4 col-form-label">Name</label>
-                <div class="col-sm-8">
+              <div class="form-group row pr-3">
+                <label for="staticEmail" class="col-sm-3 col-form-label text-left">Name</label>
+                <div class="col-sm-9">
                 <input type="text" class="form-control-plaintext border" value=""  id="exampleInputEmail1" name="fName" aria-describedby="emailHelp" placeholder="">
                 </div>
               </div>
-              <div class="form-group row">
-                <label for="inputPassword" class="col-sm-4 col-form-label">Email</label>
-                <div class="col-sm-8">
+              <div class="form-group row pr-3">
+                <label for="inputPassword" class="col-sm-3 col-form-label text-left">Reg Num</label>
+                <div class="col-sm-9">
                 <input type="text" class="form-control-plaintext border" value="" id="exampleInputPassword1" name="fFirst" placeholder="">
                 </div>
               </div>
-              <div class="form-group row">
-                <label for="inputPassword" class="col-sm-4 col-form-label">Reg Num</label>
-                <div class="col-sm-8">
-                <input type="email" class="form-control-plaintext border" value="" id="exampleInputPassword1" name="email" placeholder="">
+              <div class="form-group row pr-3">
+                <label for="inputPassword" class="col-sm-3 col-form-label text-left">Phone Num</label>
+                <div class="col-sm-9">
+                <input type="number" class="form-control-plaintext border" value="" id="exampleInputPassword1" name="email" placeholder="">
                 </div>
               </div>
-              <div class="form-group row">
-                <label for="inputPassword" class="col-sm-4 col-form-label">Email</label>
-                <div class="col-sm-8">
-                <input type="number" class="form-control-plaintext border" name="pNumber" id="exampleInputPassword1" placeholder="">
+              <div class="form-group row pr-3">
+                <label for="inputPassword" class="col-sm-3 col-form-label text-left">Email</label>
+                <div class="col-sm-9">
+                <input type="email" class="form-control-plaintext border mr-2" name="pNumber" id="exampleInputPassword1" placeholder="">
                 </div>
               </div>
+               <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
               <button type="button" @click="submitUsers" class="btn btn-success">Submit Record</button>
+            </div>
           </form>
          </div>
          </div>
+        
+    </div>
+  </div>
+</div>
        <div class="row d-flex justify-content-between" v-if="hasFetchedRecords">
          <div class="card p-2 mt-1 mb-2" style="" v-for="apiData in dataArray" :key="apiData.id">
            <header name="fName" class="text-success bold  font mb-3">{{hName()}}</header>
@@ -57,7 +72,7 @@
                 </div>
               </div>
               <div class="form-group row">
-                <label for="inputPassword" class="col-sm-4 col-form-label">Reg Num</label>
+                <label for="inputPassword" class="col-sm-4 col-form-label text-left">Reg Num</label>
                 <div class="col-sm-8">
                 <input type="email" class="form-control-plaintext border" value=""  readonly id="exampleInputPassword1" name="email" placeholder="">
                 </div>
