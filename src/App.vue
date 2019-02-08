@@ -19,34 +19,58 @@
           </div>
           <div class="modal-body">
            <div class="  mt-1" style="">
+<<<<<<< HEAD
          <form @submit.prevent="saveStudent" method="POST">
               <div class="form-group row pr-3">
                 <label for="staticEmail" class="col-sm-3 col-form-label text-left">Name</label>
                 <div class="col-sm-9">
                 <input type="text" class="form-control-plaintext border" v-model="form.name" value=""  id="exampleInputEmail1" name="name" aria-describedby="emailHelp" placeholder="">
+=======
+         <form action="api" method="POST">
+              <div class="form-group row pr-3">
+                <label for="staticEmail" class="col-sm-3 col-form-label text-left">Name</label>
+                <div class="col-sm-9">
+                <input type="text" class="form-control-plaintext border" value=""  id="exampleInputEmail1" name="fName" aria-describedby="emailHelp" placeholder="">
+>>>>>>> ea17944a28b2c5f480447d9be75cfd16ad271dab
                 </div>
               </div>
               <div class="form-group row pr-3">
                 <label for="inputPassword" class="col-sm-3 col-form-label text-left">Reg Num</label>
                 <div class="col-sm-9">
+<<<<<<< HEAD
                 <input type="text" class="form-control-plaintext border" v-model="form.reg_no" value="" id="exampleInputPassword1" name="reg_no" placeholder="">
+=======
+                <input type="text" class="form-control-plaintext border" value="" id="exampleInputPassword1" name="fFirst" placeholder="">
+>>>>>>> ea17944a28b2c5f480447d9be75cfd16ad271dab
                 </div>
               </div>
               <div class="form-group row pr-3">
                 <label for="inputPassword" class="col-sm-3 col-form-label text-left">Phone Num</label>
                 <div class="col-sm-9">
+<<<<<<< HEAD
                 <input type="number" class="form-control-plaintext border" v-model="form.phone" value="" id="exampleInputPassword1" name="phone" placeholder="">
+=======
+                <input type="number" class="form-control-plaintext border" value="" id="exampleInputPassword1" name="email" placeholder="">
+>>>>>>> ea17944a28b2c5f480447d9be75cfd16ad271dab
                 </div>
               </div>
               <div class="form-group row pr-3">
                 <label for="inputPassword" class="col-sm-3 col-form-label text-left">Email</label>
                 <div class="col-sm-9">
+<<<<<<< HEAD
                 <input type="email" class="form-control-plaintext border mr-2" v-model="form.email" name="email" id="exampleInputPassword1" placeholder="">
+=======
+                <input type="email" class="form-control-plaintext border mr-2" name="pNumber" id="exampleInputPassword1" placeholder="">
+>>>>>>> ea17944a28b2c5f480447d9be75cfd16ad271dab
                 </div>
               </div>
                <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+<<<<<<< HEAD
               <button type="submit"  class="btn btn-success">Submit Record</button>
+=======
+              <button type="button" @click="submitUsers" class="btn btn-success">Submit Record</button>
+>>>>>>> ea17944a28b2c5f480447d9be75cfd16ad271dab
             </div>
           </form>
          </div>
