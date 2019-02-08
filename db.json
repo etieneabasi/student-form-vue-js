@@ -1,0 +1,18 @@
+{
+  "students": [
+    {
+      "name": "jskadjsd",
+      "reg_no": "dasda",
+      "phone": "21324",
+      "email": "ded@ks.cd",
+      "id": 4
+    },
+    {
+      "name": "Samuel Okon",
+      "reg_no": "18/eg/ma/5555",
+      "phone": "0816666666",
+      "email": "eman@test.com",
+      "id": 5
+    }
+  ]
+}
